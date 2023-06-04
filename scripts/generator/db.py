@@ -78,24 +78,27 @@ def update_or_create_activity(session, run_activity):
             session.query(Activity).filter_by(run_id=int(run_activity.id)).first()
         )
         if not activity:
+            # print(f"something wrong pass {run_activity}")
+            # return False
             start_point = run_activity.start_latlng
             location_country = getattr(run_activity, "location_country", "")
             # or China for #176 to fix
-            if not location_country and start_point or location_country == "China":
-                try:
-                    location_country = str(
-                        g.reverse(f"{start_point.lat}, {start_point.lon}")
-                    )
-                # limit (only for the first time)
-                except:
-                    print("+++++++limit+++++++")
-                    time.sleep(2)
-                    try:
-                        location_country = str(
-                            g.reverse(f"{start_point.lat}, {start_point.lon}")
-                        )
-                    except:
-                        pass
+            # if not location_country and start_point or location_country == "China":
+            #     try:
+            #         location_country = str(
+            #             g.reverse(f"{start_point.lat}, {start_point.lon}")
+            #         )
+            #     # limit (only for the first time)
+            #     except Exception as e:
+            #         print(f"发生异常：{e}")
+            #         print("+++++++limit+++++++")
+            #         time.sleep(2)
+            #         try:
+            #             location_country = str(
+            #                 g.reverse(f"{start_point.lat}, {start_point.lon}")
+            #             )
+            #         except:
+            #             pass
 
             activity = Activity(
                 run_id=run_activity.id,
@@ -115,6 +118,7 @@ def update_or_create_activity(session, run_activity):
             )
             session.add(activity)
             created = True
+            time.sleep(0.1)
         else:
             activity.name = run_activity.name
             activity.distance = float(run_activity.distance)
@@ -126,6 +130,7 @@ def update_or_create_activity(session, run_activity):
             activity.summary_polyline = (
                 run_activity.map and run_activity.map.summary_polyline or ""
             )
+            print(f"activity {activity}")
     except Exception as e:
         print(f"something wrong with {run_activity.id}")
         print(str(e))

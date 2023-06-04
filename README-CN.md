@@ -1,6 +1,6 @@
-![running_page](https://socialify.git.ci/yihong0618/running_page/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fshaonianche%2Fgallery%2Fmaster%2Frunning_page%2Frunning_page_logo_150*150.jpg&owner=1&pulls=1&stargazers=1&theme=Light)
+![running_page](https://socialify.git.ci/muyids/running_page/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fshaonianche%2Fgallery%2Fmaster%2Frunning_page%2Frunning_page_logo_150*150.jpg&owner=1&pulls=1&stargazers=1&theme=Light)
 
-# [这里是白银越野赛全部 21 位逝者的故事](https://github.com/yihong0618/running_page/issues/135)
+# [这里是白银越野赛全部 21 位逝者的故事](https://github.com/muyids/running_page/issues/135)
 
 R.I.P. 希望大家都能健康顺利的跑过终点，逝者安息。
 
@@ -15,7 +15,7 @@ R.I.P. 希望大家都能健康顺利的跑过终点，逝者安息。
 
 </details>
 
-## [大家的跑步主页展示](https://github.com/yihong0618/running_page/issues/12)
+## [大家的跑步主页展示](https://github.com/muyids/running_page/issues/12)
 
 <details>
 <summary>Running page runners</summary>
@@ -24,7 +24,7 @@ R.I.P. 希望大家都能健康顺利的跑过终点，逝者安息。
 | ------------------------------------------------- | ---------------------------------------------- | --------- |
 | [zhubao315](https://github.com/zhubao315)         | <https://zhubao315.github.io/running>          | Strava    |
 | [shaonianche](https://github.com/shaonianche)     | <https://run.duanfei.org>                      | Strava    |
-| [yihong0618](https://github.com/yihong0618)       | <https://yihong.run>                           | Nike      |
+| [muyids](https://github.com/muyids)       | <https://yihong.run>                           | Nike      |
 | [superleeyom](https://github.com/superleeyom)     | <https://running.leeyom.top>                   | Nike      |
 | [geekplux](https://github.com/geekplux)           | <https://activities.geekplux.com>              | Nike      |
 | [guanlan](https://github.com/guanlan)             | <https://grun.vercel.app>                      | Strava    |
@@ -116,7 +116,7 @@ R.I.P. 希望大家都能健康顺利的跑过终点，逝者安息。
 ## 下载
 
 ```
-git clone https://github.com/yihong0618/running_page.git --depth=1
+git clone https://github.com/muyids/running_page.git --depth=1
 ```
 
 ## 安装及测试 (node >= 12 and <= 14 python >= 3.7)
@@ -180,7 +180,7 @@ siteMetadata: {
     },
     {
       name: 'About',
-      url: 'https://github.com/yihong0618/running_page/blob/master/README-CN.md',
+      url: 'https://github.com/muyids/running_page/blob/master/README-CN.md',
     },
   ],
 },
@@ -674,7 +674,7 @@ python3(python) scripts/strava_to_garmin_sync.py ${{ secrets.STRAVA_CLIENT_ID }}
 <summary>生成数据展示</summary>
 
 - 生成数据展示 SVG
-- 展示效果：[点击查看](https://raw.githubusercontent.com/yihong0618/running_page/master/assets/github.svg)、[点击查看](https://raw.githubusercontent.com/yihong0618/running_page/28fa801e4e30f30af5ae3dc906bf085daa137936/assets/grid.svg)
+- 展示效果：[点击查看](https://raw.githubusercontent.com/muyids/running_page/master/assets/github.svg)、[点击查看](https://raw.githubusercontent.com/muyids/running_page/28fa801e4e30f30af5ae3dc906bf085daa137936/assets/grid.svg)
 
 > 注：感兴趣的同学可以改下方参数 (--special-distance 10 --special-distance2 20, 10km~20km 展示为 special-color1 20km 以上展示为 special-color2, --min-distance 10.0 用来筛选 10km 以上的)
 
@@ -755,7 +755,7 @@ python3(python) scripts/gen_svg.py --from-db --type circular --use-localtime
 <details>
 <summary>修改 GitHub Actions Token</summary>
 
-Actions [源码](https://github.com/yihong0618/running_page/blob/master/.github/workflows/run_data_sync.yml)
+Actions [源码](https://github.com/muyids/running_page/blob/master/.github/workflows/run_data_sync.yml)
 需要做如下步骤
 
 1. 更改成你的 app type 及 info
