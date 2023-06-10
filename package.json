@@ -1,8 +1,8 @@
 {
-  "name": "yihong.run",
-  "description": "Yi hong",
+  "name": "muyids-running-page",
+  "description": "muyids running page",
   "version": "1.0.0",
-  "author": "Yi Hong <zouzou0208@gmail.com>",
+  "author": "Muyids <dfsq1311@gmail.com>",
   "dependencies": {
     "@mapbox/mapbox-gl-language": "^1.0.0",
     "@mapbox/polyline": "^1.1.1",
@@ -38,8 +38,9 @@
   "private": true,
   "scripts": {
     "data:clean": "rm -f scripts/data.db GPX_OUT/*.gpx src/static/activities.json assets/year_*.svg",
-    "data:download:garmin": "python3 scripts/garmin_sync.py",
-    "data:analysis": "python3 scripts/gen_svg.py --from-db --type github --output assets/github.svg",
+    "data:download:garmin": "python3 scripts/garmin_sync.py --only-run --is-cn",
+    "data:analysis": "python3 scripts/gen_svg.py --from-db --title \"${GRID_TITLE}\" --type github --athlete ${ATHLETE} --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5",
+    "data:circle": "python3 scripts/gen_svg.py --from-db --title \"${CIRCLE_TITLE}\" --type grid --athlete ${ATHLETE}  --output assets/grid.svg --min-distance 10.0 --special-color yellow --special-color2 red --special-distance 20 --special-distance2 40 --use-localtime",
     "build": "gatsby clean && gatsby build",
     "build-prefix": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
@@ -56,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/muyids/running_page"
+    "url": "https://github.com/muyids/running"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.6",

@@ -3,10 +3,10 @@
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
-    siteTitle: 'Running Page',
-    siteUrl: 'https://github.com/muyids',
+    siteTitle: 'Muyids\'s Running Page',
+    siteUrl: 'https://muyids.github.io/running/',
     logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
-    description: 'Personal site and blog for running',
+    description: '纵有疾风起，人生不言弃',
     navLinks: [
       {
         name: 'Blog',
@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         name: 'About',
-        url: 'https://github.com/muyids',
+        url: 'https://github.com/muyids/running',
       },
     ],
   },
