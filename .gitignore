@@ -22,4 +22,8 @@ config.yaml
 
 # private data
 GPX_OUT/*.gpx
-
+scripts/data.db
+src/static/activities.json
+# assets/github*
+# assets/grid.svg
+# assets/year_*.svg
