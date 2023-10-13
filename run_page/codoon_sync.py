@@ -299,9 +299,7 @@ class CodoonAuth:
             session.headers.update(device_info_headers())
             query = f"client_id={client_id}&grant_type=refresh_token&refresh_token={refresh_token}&scope=user%2Csports"
             r = session.post(
-                f"{base_url}/token?" + query,
-                data=query,
-                auth=self.reload(query),
+                f"{base_url}/token?" + query, data=query, auth=self.reload(query),
             )
             if not r.ok:
                 print(r.json())
@@ -391,9 +389,7 @@ class Codoon:
             "scope": "user",
         }
         r = self.session.get(
-            f"{base_url}/token",
-            params=params,
-            auth=self.auth.reload(params),
+            f"{base_url}/token", params=params, auth=self.auth.reload(params),
         )
         login_data = r.json()
         if login_data.__contains__("status") and login_data["status"] == "Error":

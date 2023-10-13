@@ -24,11 +24,7 @@ def generate_strava_run_points(start_time, strava_streams):
 
     for i, j in zip(time_list, latlng_list):
         points_dict_list.append(
-            {
-                "latitude": j[0],
-                "longitude": j[1],
-                "time": i,
-            }
+            {"latitude": j[0], "longitude": j[1], "time": i,}
         )
     # add heart rate
     if strava_streams.get("heartrate"):
@@ -113,10 +109,7 @@ if __name__ == "__main__":
     parser.add_argument("strava_email", nargs="?", help="email of strava")
     parser.add_argument("strava_password", nargs="?", help="password of strava")
     parser.add_argument(
-        "--is-cn",
-        dest="is_cn",
-        action="store_true",
-        help="if garmin accout is cn",
+        "--is-cn", dest="is_cn", action="store_true", help="if garmin accout is cn",
     )
     parser.add_argument(
         "--use_fake_garmin_device",

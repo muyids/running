@@ -99,7 +99,6 @@ def update_or_create_activity(session, run_activity):
             #         except:
             #             pass
 
-
             activity = Activity(
                 run_id=run_activity.id,
                 name=run_activity.name,
